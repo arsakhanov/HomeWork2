@@ -2,8 +2,6 @@ package ru.arsakhanov;
 
 public class MyHashMap {
 
-    //todo удаление элемента DONE
-
     private int capacity;
     public Entry[] buckets;
     private int size = 0;
