@@ -1,12 +1,14 @@
 package ru.arsakhanov;
 
-
+/**
+ * Класс для создания ноды, чтобы добавлять новые элементы в map
+ */
 public class Entry {
     final Object key;
     Object value;
     Entry next;
 
-
+    //конструктор класса Entry
     public Entry(Object key, Object value, Entry next) {
         this.key = key;
         this.value = value;
@@ -25,6 +27,13 @@ public class Entry {
         return next;
     }
 
+    /**
+     * переопределеине equals
+     * объекты равны только тогда, когда равны их ключи и значения
+     *
+     * @param obj объект с парой ключ-значение
+     * @return возвращает true, если объекты равны и false в противном случае
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -36,6 +45,11 @@ public class Entry {
         return false;
     }
 
+    /**
+     * переопределение хэш кода
+     *
+     * @return возвращает хэш код
+     */
     @Override
     public int hashCode() {
         int hash = 13;
@@ -44,9 +58,14 @@ public class Entry {
         return hash;
     }
 
+    /**
+     * переопределенный метод toString
+     *
+     * @return возвращает строку типа String
+     */
     @Override
     public String toString() {
-        return '{' +"key=" + getKey() +
+        return '{' + "key=" + getKey() +
                 ", value=" + getValue() +
                 '}' + '\n';
     }
