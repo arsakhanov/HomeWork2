@@ -1,7 +1,10 @@
 package ru.arsakhanov;
 
+/**
+ * Класс для создания хэш мапы(hashmap)
+ * для хранения пары ключ-значение используется класс Entry
+ */
 public class MyHashMap {
-
     private int capacity;
     public Entry[] buckets;
     private int size = 0;
